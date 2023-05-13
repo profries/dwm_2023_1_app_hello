@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Hello from './componentes/Hello'
+import HiMessage from './componentes/HiMessage';
+import Card from './componentes/Card';
+import ListCards from './componentes/ListCards';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Hello />
+      <Hello pessoa={{nome: "Fulano", idade: 16}} />
+      <Hello pessoa={{nome: "Sicrano", idade: 30}} />
+      <HiMessage mensagem= "How are you?" />
+      <HiMessage />
+      <Card titulo="Produto 1">
+        <h4>Descricao do Produto 1</h4>
+        <h3>R$ 30,00</h3>
+      </Card>
+      
+      <ListCards />
+    </>
   );
 }
 
